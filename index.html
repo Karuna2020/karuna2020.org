@@ -19,6 +19,11 @@
           "Helvetica Neue", sans-serif;
         font-size: 120%;
         line-height: 1.5;
+        color: #1f0000;
+        font-variant-ligatures: common-ligatures;
+      }
+      ::selection {
+        background-color: #ffc9c9;
       }
       main {
         max-width: 720px;
@@ -33,12 +38,16 @@
         margin-top: 2rem;
       }
       .buttons a {
-        background-color: #f60000;
+        background-color: #666;
         color: #fff;
         padding: 0.75rem 1rem;
         border-radius: 0.2rem;
+        margin-right: 0.5rem;
         text-decoration: none;
         display: inline-block;
+      }
+      .buttons a:first-child {
+        background-color: #f60000;
       }
     </style>
   </head>
@@ -75,6 +84,9 @@
       <div class="buttons">
         <a href="https://www.facebook.com/Karuna2020.org" target="_blank"
           >Follow our progress on Facebook &rarr;</a
+        >
+        <a href="https://github.com/Karuna2020" target="_blank"
+          >Contribute on GitHub &rarr;</a
         >
       </div>
     </main>
