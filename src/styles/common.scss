@@ -3,6 +3,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   font-size: 120%;
+  margin: 0;
   line-height: 1.5;
   color: #1f0000;
   font-variant-ligatures: common-ligatures;
@@ -11,3 +12,16 @@ body {
 a {
   color: #f60000;
 }
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@import "./sections.scss";

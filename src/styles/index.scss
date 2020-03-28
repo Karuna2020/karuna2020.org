@@ -3,7 +3,6 @@
 }
 
 .home-main {
-  max-width: 720px;
   margin: 5rem auto;
   .logo {
     max-width: 12.5rem;
@@ -11,7 +10,7 @@
     display: block;
   }
   .buttons {
-    margin-top: 2rem;
+    margin-top: 1rem;
     a {
       line-height: 1.25;
       background-color: #666;
@@ -21,6 +20,7 @@
       margin-right: 0.5rem;
       text-decoration: none;
       display: inline-block;
+      margin-top: 1rem;
     }
     a:first-child {
       background-color: #f60000;

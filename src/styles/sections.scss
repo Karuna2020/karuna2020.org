@@ -1,0 +1,16 @@
+footer {
+  background-color: #f7eded;
+  font-size: 85%;
+  padding: 2.5rem 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  p {
+    margin: 0;
+  }
+  nav a:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
