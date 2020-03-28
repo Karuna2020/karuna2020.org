@@ -138,7 +138,7 @@ const IndexPage = () => {
             </ul>
             <div>
               <p>
-                In just ₹{totalAmount.toLocaleString()}, our food and wellness
+                For just ₹{totalAmount.toLocaleString()}, our food and wellness
                 kit can feed a family for a whole month. Do your part —
                 contribute generously.
               </p>
