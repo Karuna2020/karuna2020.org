@@ -1,5 +1,5 @@
 import React from "react"
-import {SEO, Image} from "../components/elements"
+import { SEO, Image } from "../components/elements"
 
 import "../styles/common.scss"
 import "../styles/index.scss"
@@ -7,8 +7,7 @@ import "../styles/index.scss"
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <main
-    className="home-main">
+    <main className="home-main">
       <Image
         className="logo"
         alt="Karuna 2020"
@@ -38,12 +37,12 @@ const IndexPage = () => (
         catch up with it soon, and then defeat it!
       </p>
       <div className="buttons">
-        <a href="https://www.facebook.com/Karuna2020.org" target="_blank"
-          >Follow our progress on Facebook &rarr;</a
-        >
-        <a href="https://github.com/Karuna2020" target="_blank"
-          >Contribute on GitHub &rarr;</a
-        >
+        <a href="https://www.facebook.com/Karuna2020.org" target="_blank">
+          Follow our progress on Facebook &rarr;
+        </a>
+        <a href="https://github.com/Karuna2020" target="_blank">
+          Contribute on GitHub
+        </a>
       </div>
     </main>
   </>
