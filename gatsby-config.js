@@ -19,8 +19,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "gatsby-starter-default",
-        short_name: "starter",
+        name: "Karuna 2020",
+        short_name: "Karuna",
         start_url: "/",
         background_color: "#663399",
         theme_color: "#663399",
