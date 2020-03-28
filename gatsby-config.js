@@ -28,6 +28,12 @@ module.exports = {
         icon: "src/images/logo/title-logo.svg",
       },
     },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "https://platform.oswaldlabs.com/v1/agastya/load/karuna2020.js",
+      },
+    },
     "gatsby-plugin-offline",
   ],
 }
