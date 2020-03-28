@@ -25,7 +25,7 @@ const IndexPage = () => (
         its citizens comfortable, what can we do to help?{" "}
         <strong>Karuna 2020</strong> is a small effort to try to bring together
         people and do our part in helping feed those most affected during the
-        coronavirus pandemic
+        coronavirus pandemic.
       </p>
       <div className="buttons">
         <a
