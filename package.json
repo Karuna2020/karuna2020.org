@@ -1,25 +1,47 @@
 {
   "name": "karuna2020.org",
-  "version": "0.0.0",
+  "private": false,
+  "description": "🙌 Website for the Karuna 2020 project",
+  "version": "0.1.0",
+  "dependencies": {
+    "gatsby": "^2.19.45",
+    "gatsby-image": "^2.2.44",
+    "gatsby-plugin-manifest": "^2.2.48",
+    "gatsby-plugin-offline": "^3.0.41",
+    "gatsby-plugin-react-helmet": "^3.1.24",
+    "gatsby-plugin-sass": "^2.2.1",
+    "gatsby-plugin-sharp": "^2.4.13",
+    "gatsby-source-filesystem": "^2.1.56",
+    "gatsby-transformer-sharp": "^2.3.19",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "karuna-2020",
+    "static-site",
+    "non-profit"
+  ],
   "license": "MIT",
   "scripts": {
-    "build": "parcel build index.html",
-    "start": "parcel index.html"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "parcel": "^1.12.4",
-    "parcel-plugin-sitemap": "^2.1.6",
-    "parcel-plugin-static-files-copy": "^2.3.1",
-    "parcel-plugin-subresource-integrity": "^0.3.4",
-    "sass": "^1.26.3",
-    "typescript": "^3.8.3"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Karuna2020/karuna2020.org/tree/gatsby-site"
   },
-  "staticFiles": {
-    "staticPath": "static",
-    "watcherGlob": "**"
-  },
-  "sitemap": {
-    "siteURL": "https://karuna2020.org/"
+  "bugs": {
+    "url": "https://github.com/Karuna2020/karuna2020.org/issues"
   }
 }
