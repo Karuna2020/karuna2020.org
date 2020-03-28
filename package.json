@@ -1,7 +1,6 @@
 {
   "name": "karuna2020.org",
-  "private": false,
-  "description": "🙌 Website for the Karuna 2020 project",
+  "description": "Website for the Karuna 2020 project",
   "version": "0.1.0",
   "dependencies": {
     "gatsby": "^2.19.45",
