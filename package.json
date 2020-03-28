@@ -9,12 +9,17 @@
   "dependencies": {},
   "devDependencies": {
     "parcel": "^1.12.4",
+    "parcel-plugin-sitemap": "^2.1.6",
     "parcel-plugin-static-files-copy": "^2.3.1",
+    "parcel-plugin-subresource-integrity": "^0.3.4",
     "sass": "^1.26.3",
     "typescript": "^3.8.3"
   },
   "staticFiles": {
     "staticPath": "static",
     "watcherGlob": "**"
+  },
+  "sitemap": {
+    "siteURL": "https://karuna2020.org/"
   }
 }
