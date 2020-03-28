@@ -21,8 +21,8 @@ const IndexPage = () => (
         meals or essential medicines.
       </p>
       <p>
-        While the Government is putting significant effort in making lives of
-        its citizens comfortable, what can we do to help?{" "}
+        While the Government is putting significant effort into making the lives
+        of its citizens comfortable, what can we do to help?{" "}
         <strong>Karuna 2020</strong> is a small effort to try to bring together
         people and do our part in helping feed those most affected during the
         coronavirus pandemic.
@@ -43,6 +43,51 @@ const IndexPage = () => (
           Contribute on GitHub
         </a>
       </div>
+      <section className="numbers">
+        <h1>Karuna 2020 in numbers</h1>
+        <div className="data">
+          <div>
+            <div>₹2390</div>
+            <div>Total raised</div>
+          </div>
+          <div>
+            <div>0</div>
+            <div>Kits delivered</div>
+          </div>
+          <div>
+            <div>0</div>
+            <div>People impacted</div>
+          </div>
+        </div>
+        <p>
+          We've made all of our data, including contributions, procurement, and
+          beneficiaries,{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Karuna2020"
+          >
+            open source
+          </a>{" "}
+          on GitHub. You can use our{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://open-data.karuna2020.org"
+          >
+            API
+          </a>{" "}
+          or contribute to our{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Karuna2020/open-data"
+          >
+            Open data
+          </a>{" "}
+          platform.
+        </p>
+      </section>
     </main>
   </>
 )

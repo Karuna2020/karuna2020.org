@@ -1,6 +1,7 @@
 ::selection {
   background-color: #ffc9c9;
 }
+
 .home-main {
   max-width: 720px;
   margin: 5rem auto;
@@ -24,5 +25,24 @@
     a:first-child {
       background-color: #f60000;
     }
+  }
+}
+
+.numbers {
+  margin-top: 5rem;
+  .data {
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      flex: 1 0 0;
+      > div:first-child {
+        font-size: 222%;
+        font-weight: 300;
+      }
+    }
+  }
+  p:last-child {
+    font-size: 85%;
+    opacity: 0.9;
   }
 }
