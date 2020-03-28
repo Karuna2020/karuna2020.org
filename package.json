@@ -2,5 +2,19 @@
   "name": "karuna2020.org",
   "version": "0.0.0",
   "license": "MIT",
-  "dependencies": {}
+  "scripts": {
+    "build": "parcel build index.html",
+    "start": "parcel index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "parcel-plugin-static-files-copy": "^2.3.1",
+    "sass": "^1.26.3",
+    "typescript": "^3.8.3"
+  },
+  "staticFiles": {
+    "staticPath": "static",
+    "watcherGlob": "**"
+  }
 }
