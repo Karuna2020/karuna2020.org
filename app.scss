@@ -21,16 +21,17 @@ main {
 }
 .buttons {
   margin-top: 2rem;
-}
-.buttons a {
-  background-color: #666;
-  color: #fff;
-  padding: 0.75rem 1rem;
-  border-radius: 0.2rem;
-  margin-right: 0.5rem;
-  text-decoration: none;
-  display: inline-block;
-}
-.buttons a:first-child {
-  background-color: #f60000;
+  a {
+    line-height: 1.25;
+    background-color: #666;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.2rem;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  a:first-child {
+    background-color: #f60000;
+  }
 }
