@@ -9,6 +9,8 @@ const IndexPage = () => {
   const [totalRaised, setTotalRaised] = useState(0)
   const [contributors, setContributors] = useState(0)
   const [volunteers, setVolunteers] = useState(0)
+  const [totalAmount, setTotalAmount] = useState(0)
+  const [kitItems, setKitItems] = useState([])
 
   useEffect(() => {
     fetch("https://open-data.karuna2020.org/summary.json")
@@ -18,6 +20,21 @@ const IndexPage = () => {
         if (json.numberOfContributors)
           setContributors(json.numberOfContributors)
         if (json.numberOfVolunteers) setVolunteers(json.numberOfVolunteers)
+      })
+      .catch(() => {})
+    fetch("https://open-data.karuna2020.org/material-to-be-procured.json")
+      .then(response => response.json())
+      .then(items => {
+        const data = []
+        for (let i = 0; i < items.length; i++) {
+          const item = items[i]
+          if (item.Item === "Total" && item["Total Costs"]) {
+            setTotalAmount(parseInt(item["Total Costs"]))
+            break
+          }
+          if (item.Quanitiy && item.Rate && item["Total Costs"]) data.push(item)
+        }
+        setKitItems(data)
       })
       .catch(() => {})
   }, [])
@@ -52,6 +69,13 @@ const IndexPage = () => {
             rel="noopener noreferrer"
           >
             Follow our progress on Facebook &rarr;
+          </a>
+          <a
+            href="https://m.me/Karuna2020.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact us
           </a>
         </div>
         <section className="numbers">
@@ -98,6 +122,31 @@ const IndexPage = () => {
             </a>{" "}
             platform.
           </p>
+        </section>
+        <section className="kit">
+          <h1>Food and wellness kit</h1>
+          <div>
+            <ul>
+              {kitItems.map((i, x) => (
+                <li key={i.Item + x}>
+                  <span>{i.Item}</span>
+                  <span>
+                    {i.Quanitiy} × ₹{i.Rate}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div>
+              <p>
+                In just ₹{totalAmount.toLocaleString()}, our food and wellness
+                kit can feed a family for a whole month. Do your part —
+                contribute generously.
+              </p>
+              <div className="buttons">
+                <a href="#">Sponsor a kit &rarr;</a>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <Footer />

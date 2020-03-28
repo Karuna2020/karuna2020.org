@@ -46,3 +46,45 @@
     opacity: 0.9;
   }
 }
+
+.kit {
+  margin-top: 5rem;
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      flex: 1 0 0;
+    }
+  }
+  ul {
+    background-color: #eee;
+    margin: 0;
+    padding: 1.5rem;
+    list-style: none;
+    box-sizing: border-box;
+    margin-right: 2rem;
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+    li + li {
+      margin-top: 0.5rem;
+    }
+    span:last-child {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .kit > div,
+  .numbers .data {
+    display: block;
+    ul {
+      margin-right: 0;
+    }
+    > * + * {
+      margin-top: 1rem;
+    }
+  }
+}
