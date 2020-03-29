@@ -83,18 +83,18 @@ const IndexPage = () => {
         <section className="numbers">
           <h1>Karuna 2020 in numbers</h1>
           <div className="data">
-            <div>
+            <Link to="/contributors">
               <div>₹{totalRaised.toLocaleString()}</div>
               <div>Total raised</div>
-            </div>
-            <div>
+            </Link>
+            <Link to="/contributors">
               <div>{contributors.toLocaleString()}</div>
               <div>Contributors</div>
-            </div>
-            <div>
+            </Link>
+            <Link to="/volunteers">
               <div>{volunteers.toLocaleString()}</div>
               <div>Volunteers</div>
-            </div>
+            </Link>
           </div>
           <p>
             We've made all of our data, including contributions, procurement,

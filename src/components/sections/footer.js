@@ -9,7 +9,7 @@ const Footer = () => (
       <nav>
         <Link to="/">Home</Link>
         <Link to="/volunteers">Volunteers</Link>
-        <Link to="/contribute">Contribute</Link>
+        <Link to="/contributors">Contributors</Link>
         <a href="https://open-data.karuna2020.org">API</a>
         <a href="https://github.com/Karuna2020">GitHub</a>
       </nav>

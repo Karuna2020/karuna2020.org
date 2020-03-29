@@ -37,7 +37,9 @@
   .data {
     display: flex;
     flex-wrap: wrap;
-    > div {
+    > * {
+      color: inherit;
+      text-decoration: none;
       flex: 1 0 0;
       > div:first-child {
         font-size: 222%;
