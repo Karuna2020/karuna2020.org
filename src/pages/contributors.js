@@ -5,29 +5,41 @@ import { Footer, Header } from "../components/sections"
 import "../styles/common.scss"
 import "../styles/page.scss"
 
-const VolunteersPage = () => {
-  const [volunteers, setVolunteers] = useState([])
+const ContributorsPage = () => {
+  const [volunteers, setContributors] = useState([])
 
   useEffect(() => {
-    fetch("https://open-data.karuna2020.org/volunteers.json")
+    fetch("https://open-data.karuna2020.org/amount-received.json")
       .then(response => response.json())
-      .then(items => setVolunteers(items))
+      .then(items =>
+        setContributors(
+          items
+            .filter(i => i.Amount.trim())
+            .map(i => {
+              const value = parseInt(i.Amount.replace(/\D/g, ""))
+              if (!isNaN(value)) {
+                i.Amount = value
+              }
+              return i
+            })
+        )
+      )
       .catch(() => {})
   }, [])
 
   return (
     <>
-      <SEO title="Volunteers" />
+      <SEO title="Contributors" />
       <Header />
       <main className="container page">
         <section className="kit">
-          <h1>Volunteers</h1>
+          <h1>Contributors</h1>
           <div>
             <ul>
               {volunteers.map((i, x) => (
-                <li key={i["S. No."] + x}>
-                  <span>{i.Name}</span>
-                  <span>{i["Area of Work Allocated "]}</span>
+                <li key={i["Contributor Name"] + x}>
+                  <span>{i["Contributor Name"]}</span>
+                  <span>₹{i["Amount"].toLocaleString()}</span>
                 </li>
               ))}
             </ul>
@@ -50,4 +62,4 @@ const VolunteersPage = () => {
   )
 }
 
-export default VolunteersPage
+export default ContributorsPage

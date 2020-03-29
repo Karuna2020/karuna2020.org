@@ -145,7 +145,7 @@ const IndexPage = () => {
                 contribute generously.
               </p>
               <div className="buttons">
-                <a href="#">Sponsor a kit &rarr;</a>
+                <Link to="/contributors">Sponsor a kit &rarr;</Link>
               </div>
             </div>
           </div>
