@@ -10,6 +10,10 @@ footer {
   p {
     margin: 0;
   }
+  nav {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
   nav a:not(:last-child) {
     margin-right: 2rem;
   }
