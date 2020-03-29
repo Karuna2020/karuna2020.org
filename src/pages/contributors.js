@@ -47,14 +47,26 @@ const ContributorsPage = () => {
             </ul>
             <div>
               <p>
-                Karuna 2020 is a small effort to try to bring together people
-                and do our part. We need volunteers to take care of procurement,
-                cooking management, distribution, fund raising, accounting,
-                social media, technology and volunteer management.
+                <strong>Contribute to</strong>
               </p>
-              <div className="buttons">
-                <a href="/example">Become a volunteer &rarr;</a>
-              </div>
+              <ul>
+                <li>
+                  <strong>Name of account:</strong> Integral Livelihood and SE
+                  Foundation
+                </li>
+                <li>
+                  <strong>Current Account no.:</strong> 50200029583556
+                </li>
+                <li>
+                  <strong>Bank:</strong> HDFC Bank Ltd.
+                </li>
+                <li>
+                  <strong>Branch:</strong> Adchini
+                </li>
+                <li>
+                  <strong>RTGS/NEST IFSC:</strong> HDFC0004397
+                </li>
+              </ul>
             </div>
           </div>
         </section>
