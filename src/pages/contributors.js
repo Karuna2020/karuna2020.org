@@ -9,7 +9,9 @@ const ContributorsPage = () => {
   const [volunteers, setContributors] = useState([])
 
   useEffect(() => {
-    fetch("https://open-data.karuna2020.org/amount-received.json")
+    fetch(
+      `https://open-data.karuna2020.org/amount-received.json?v=${new Date().getTime()}`
+    )
       .then(response => response.json())
       .then(items =>
         setContributors(

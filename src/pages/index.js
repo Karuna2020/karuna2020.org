@@ -16,7 +16,9 @@ const IndexPage = () => {
   const [kitItems, setKitItems] = useState([])
 
   useEffect(() => {
-    fetch("https://open-data.karuna2020.org/summary.json")
+    fetch(
+      `https://open-data.karuna2020.org/summary.json?v=${new Date().getTime()}`
+    )
       .then(response => response.json())
       .then(json => {
         if (json.totalAmountRaised) setTotalRaised(json.totalAmountRaised)
@@ -25,7 +27,9 @@ const IndexPage = () => {
         if (json.numberOfVolunteers) setVolunteers(json.numberOfVolunteers)
       })
       .catch(() => {})
-    fetch("https://open-data.karuna2020.org/material-list.json")
+    fetch(
+      `https://open-data.karuna2020.org/material-list.json?v=${new Date().getTime()}`
+    )
       .then(response => response.json())
       .then(items => {
         const data = []
