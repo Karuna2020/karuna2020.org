@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { SEO, Image } from "../components/elements"
 import { Footer } from "../components/sections"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 
 import "../styles/common.scss"
 import "../styles/index.scss"
+import { Link } from "gatsby"
 
 const IndexPage = () => {
   const [totalRaised, setTotalRaised] = useState(0)
@@ -63,19 +66,18 @@ const IndexPage = () => {
           during the coronavirus pandemic.
         </p>
         <div className="buttons">
+          <Link to="/volunteers">Volunteer for Karuna 2020 &rarr;</Link>
           <a
             href="https://www.facebook.com/Karuna2020.org"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Volunteer for Karuna 2020 &rarr;
-          </a>
-          <a
-            href="https://www.facebook.com/Karuna2020.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Follow us on Facebook
+            <span>Follow us on </span>
+            <FontAwesomeIcon
+              className="smo-icon"
+              title="Facebook"
+              icon={faFacebook}
+            />
           </a>
         </div>
         <section className="numbers">
