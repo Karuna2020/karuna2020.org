@@ -49,24 +49,22 @@ const ContributorsPage = () => {
               <p>
                 <strong>Contribute to</strong>
               </p>
-              <ul>
-                <li>
-                  <strong>Name of account:</strong> Integral Livelihood and SE
-                  Foundation
-                </li>
-                <li>
-                  <strong>Current Account no.:</strong> 50200029583556
-                </li>
-                <li>
-                  <strong>Bank:</strong> HDFC Bank Ltd.
-                </li>
-                <li>
-                  <strong>Branch:</strong> Adchini
-                </li>
-                <li>
-                  <strong>RTGS/NEST IFSC:</strong> HDFC0004397
-                </li>
-              </ul>
+              <div>
+                <strong>Name of account:</strong> Integral Livelihood and SE
+                Foundation
+              </div>
+              <div>
+                <strong>Current Account no.:</strong> 50200029583556
+              </div>
+              <div>
+                <strong>Bank:</strong> HDFC Bank Ltd.
+              </div>
+              <div>
+                <strong>Branch:</strong> Adchini
+              </div>
+              <div>
+                <strong>RTGS/NEST IFSC:</strong> HDFC0004397
+              </div>
             </div>
           </div>
         </section>
