@@ -144,9 +144,9 @@ const IndexPage = () => {
             </ul>
             <div>
               <p>
-                For just ₹{totalAmount.toLocaleString()}, our food and wellness
-                kit can feed a family for a whole month. Do your part —
-                contribute generously.
+                For just ₹{(750).toLocaleString()}, our food and wellness kit
+                can feed a family for a whole month. Do your part — contribute
+                generously.
               </p>
               <div className="buttons">
                 <Link to="/contributors">Sponsor a kit &rarr;</Link>
