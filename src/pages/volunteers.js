@@ -25,9 +25,9 @@ const VolunteersPage = () => {
           <div>
             <ul>
               {volunteers.map((i, x) => (
-                <li key={i["S. No."] + x}>
-                  <span>{i.Name}</span>
-                  <span>{i["Area of Work Allocated "]}</span>
+                <li key={i.sNo + x}>
+                  <span>{i.name}</span>
+                  <span>{i.areaOfWorkAllocated}</span>
                 </li>
               ))}
             </ul>

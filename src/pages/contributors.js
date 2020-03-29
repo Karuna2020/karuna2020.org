@@ -14,11 +14,11 @@ const ContributorsPage = () => {
       .then(items =>
         setContributors(
           items
-            .filter(i => i.Amount.trim())
+            .filter(i => i.amount.trim())
             .map(i => {
-              const value = parseInt(i.Amount.replace(/\D/g, ""))
+              const value = parseInt(i.amount.replace(/\D/g, ""))
               if (!isNaN(value)) {
-                i.Amount = value
+                i.amount = value
               }
               return i
             })
@@ -37,9 +37,9 @@ const ContributorsPage = () => {
           <div>
             <ul>
               {volunteers.map((i, x) => (
-                <li key={i["Contributor Name"] + x}>
-                  <span>{i["Contributor Name"]}</span>
-                  <span>₹{i["Amount"].toLocaleString()}</span>
+                <li key={i.contributorName + x}>
+                  <span>{i.contributorName}</span>
+                  <span>₹{i.amount.toLocaleString()}</span>
                 </li>
               ))}
             </ul>

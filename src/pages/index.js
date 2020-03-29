@@ -31,11 +31,11 @@ const IndexPage = () => {
         const data = []
         for (let i = 0; i < items.length; i++) {
           const item = items[i]
-          if (item.Item === "Total" && item["Total Costs"]) {
-            setTotalAmount(parseInt(item["Total Costs"]))
+          if (item.item === "Total" && item.totalCosts) {
+            setTotalAmount(parseInt(item.totalCosts))
             break
           }
-          if (item.Quanitiy && item.Rate && item["Total Costs"]) data.push(item)
+          if (item.quanitiy && item.rate && item.totalCosts) data.push(item)
         }
         setKitItems(data)
       })
@@ -130,10 +130,10 @@ const IndexPage = () => {
           <div>
             <ul>
               {kitItems.map((i, x) => (
-                <li key={i.Item + x}>
-                  <span>{i.Item}</span>
+                <li key={i.item + x}>
+                  <span>{i.item}</span>
                   <span>
-                    {i.Quanitiy} × ₹{i.Rate}
+                    {i.quanitiy} × ₹{i.rate}
                   </span>
                 </li>
               ))}
