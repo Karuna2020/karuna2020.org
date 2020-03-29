@@ -22,7 +22,7 @@ const IndexPage = () => {
         if (json.numberOfVolunteers) setVolunteers(json.numberOfVolunteers)
       })
       .catch(() => {})
-    fetch("https://open-data.karuna2020.org/material-to-be-procured.json")
+    fetch("https://open-data.karuna2020.org/material-list.json")
       .then(response => response.json())
       .then(items => {
         const data = []
