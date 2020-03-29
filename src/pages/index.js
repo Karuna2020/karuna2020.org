@@ -130,15 +130,13 @@ const IndexPage = () => {
           </p>
         </section>
         <section className="kit">
-          <h1>Food and wellness kit</h1>
+          <h1>Karuna 2020 Dry Ration Pack</h1>
           <div>
             <ul>
               {kitItems.map((i, x) => (
                 <li key={i.item + x}>
                   <span>{i.item}</span>
-                  <span>
-                    {i.quanitiy} × ₹{i.rate}
-                  </span>
+                  <span></span>
                 </li>
               ))}
             </ul>
