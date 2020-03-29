@@ -68,14 +68,14 @@ const IndexPage = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Follow our progress on Facebook &rarr;
+            Volunteer for Karuna 2020 &rarr;
           </a>
           <a
-            href="https://m.me/Karuna2020.org"
+            href="https://www.facebook.com/Karuna2020.org"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contact us
+            Follow us on Facebook
           </a>
         </div>
         <section className="numbers">
