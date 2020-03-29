@@ -34,6 +34,12 @@ module.exports = {
         src: "https://platform.oswaldlabs.com/v1/agastya/load/karuna2020.js",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-106998524-2",
+      },
+    },
     "gatsby-plugin-offline",
   ],
 }
