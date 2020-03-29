@@ -41,7 +41,13 @@ const VolunteersPage = () => {
                 social media, technology and volunteer management.
               </p>
               <div className="buttons">
-                <a href="/example">Become a volunteer &rarr;</a>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfWD4rqTpPpJupj97Cko9yMODzXgQttc7BhDQ8LotT_JvVe3w/viewform?vc=0&c=0&w=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Become a volunteer &rarr;
+                </a>
               </div>
             </div>
           </div>
