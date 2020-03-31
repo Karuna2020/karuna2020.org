@@ -27,7 +27,7 @@
   "devDependencies": {
     "fs-extra": "^9.0.0",
     "got": "^10.7.0",
-    "prettier": "^1.19.1"
+    "prettier": "^2.0.2"
   },
   "keywords": [
     "karuna-2020",
