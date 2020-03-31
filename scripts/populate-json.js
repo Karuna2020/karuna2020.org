@@ -9,16 +9,18 @@ const endpoints = [
   "/amount-received.json",
   "/volunteers.json",
   "/material-list.json",
+  "/it-website.json",
 ]
 
 const download = async () => {
   await mkdirp(join(".", "content"))
   for await (const endpoint of endpoints) {
-    const {
-      body,
-    } = await got.get(`${BASE_URL}${endpoint}?v=${new Date().getTime()}`, {
-      responseType: "json",
-    })
+    const { body } = await got.get(
+      `${BASE_URL}${endpoint}?v=${new Date().getTime()}`,
+      {
+        responseType: "json",
+      }
+    )
     await writeJson(join(".", "content", endpoint.substr(1)), body, {
       spaces: 2,
     })
