@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from "react"
 import { SEO } from "../components/elements"
 import { Footer, Header } from "../components/sections"
+import amountReceived from "../../content/amount-received.json"
 
 import "../styles/common.scss"
 import "../styles/page.scss"
 
 const ContributorsPage = () => {
-  const [volunteers, setContributors] = useState([])
+  const [contributors, setContributors] = useState(
+    amountReceived
+      .filter(i => String(i.amount).trim())
+      .map(i => {
+        const value = parseInt(String(i.amount).replace(/\D/g, ""))
+        if (!isNaN(value)) {
+          i.amount = value
+        }
+        return i
+      })
+  )
 
   useEffect(() => {
     fetch(
@@ -16,9 +27,9 @@ const ContributorsPage = () => {
       .then(items =>
         setContributors(
           items
-            .filter(i => i.amount.trim())
+            .filter(i => String(i.amount).trim())
             .map(i => {
-              const value = parseInt(i.amount.replace(/\D/g, ""))
+              const value = parseInt(String(i.amount).replace(/\D/g, ""))
               if (!isNaN(value)) {
                 i.amount = value
               }
@@ -38,7 +49,7 @@ const ContributorsPage = () => {
           <h1>Contributors</h1>
           <div>
             <ul>
-              {volunteers.map((i, x) => (
+              {contributors.map((i, x) => (
                 <li key={i.contributorName + x}>
                   <span>{i.contributorName}</span>
                   <span>₹{i.amount.toLocaleString()}</span>

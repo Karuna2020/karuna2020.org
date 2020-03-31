@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { SEO } from "../components/elements"
 import { Footer, Header } from "../components/sections"
+import volunteersList from "../../content/volunteers.json"
 
 import "../styles/common.scss"
 import "../styles/page.scss"
 
 const VolunteersPage = () => {
-  const [volunteers, setVolunteers] = useState([])
+  const [volunteers, setVolunteers] = useState(volunteersList)
 
   useEffect(() => {
     fetch(

@@ -3,15 +3,16 @@ import { SEO, Image } from "../components/elements"
 import { Footer } from "../components/sections"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import summary from "../../content/summary.json"
 
 import "../styles/common.scss"
 import "../styles/index.scss"
 import { Link } from "gatsby"
 
 const IndexPage = () => {
-  const [totalRaised, setTotalRaised] = useState(0)
-  const [contributors, setContributors] = useState(0)
-  const [volunteers, setVolunteers] = useState(0)
+  const [totalRaised, setTotalRaised] = useState(summary.totalAmountRaised)
+  const [contributors, setContributors] = useState(summary.numberOfContributors)
+  const [volunteers, setVolunteers] = useState(summary.numberOfVolunteers)
   const [totalAmount, setTotalAmount] = useState(0)
   const [kitItems, setKitItems] = useState([])
 
