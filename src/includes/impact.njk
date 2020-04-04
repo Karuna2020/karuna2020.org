@@ -1,18 +1,18 @@
 <div class="impact">
   <div>
-    <div>₹6,59,741</div>
+    <div>₹{{ data.summary.totalAmountRaised | numberify }}</div>
     <div>Total raised</div>
   </div>
   <div>
-    <div>482</div>
+    <div>{{ data.summary.numberOfPeopleImpacted | numberify }}</div>
     <div>People impacted</div>
   </div>
   <div>
-    <div>26</div>
+    <div>{{ data.summary.numberOfContributors | numberify }}</div>
     <div>Contributors</div>
   </div>
   <div>
-    <div>18</div>
+    <div>{{ data.summary.numberOfVolunteers | numberify }}</div>
     <div>Volunteers</div>
   </div>
 </div>

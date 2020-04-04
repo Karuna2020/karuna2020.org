@@ -17,5 +17,9 @@ module.exports = {
 
     cssmin: function(css) {
         return new CleanCSS({ level: 2 }).minify(css).styles
+    },
+
+    numberify: function(number) {
+        return parseInt(number).toLocaleString('en-IN')
     }
 }
