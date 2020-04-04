@@ -19,6 +19,9 @@ const workboxOptions = {
 require('dotenv').config()
 
 module.exports = function(config) {
+    // Opt out of ignoring .gitignore files
+    config.setUseGitIgnore(false)
+
     // Plugins
     config.addPlugin(pluginRss)
     config.addPlugin(pluginPWA, workboxOptions)
