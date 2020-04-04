@@ -16,9 +16,12 @@ html {
 }
 
 .header {
-    flex: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #fff;
     background-color: var(--brand-color);
+    line-height: 1;
 }
 .header a {
     color: inherit;
@@ -30,6 +33,14 @@ html {
 .header .logoheader {
     height: 2em;
     margin-right: 1em;
+}
+.header .socialmedia a {
+    text-decoration: none;
+    margin-left: 1em;
+    display: inline-block;
+}
+.header .socialmedia svg {
+    height: 1.5em;
 }
 
 .main {
