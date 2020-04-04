@@ -1,0 +1,37 @@
+@media (max-width: 900px) {
+    .header > div {
+        text-align: center;
+        display: block;
+    }
+    header nav.socialmedia {
+        margin-top: 1em;
+    }
+    .header > nav {
+        line-height: 2;
+    }
+    .header > nav > a:last-child {
+        margin-left: 0;
+    }
+    .impact {
+        justify-content: space-between;
+    }
+    .impact > div {
+        flex: auto;
+        width: 50%;
+    }
+    .impact > div:nth-child(2n) {
+        text-align: right;
+    }
+    .impact > div + div,
+    .impact > div {
+        margin-bottom: 1em;
+    }
+    .packlist li {
+        flex: auto;
+        width: 50%;
+    }
+    .packlist li + li,
+    .packlist li {
+        margin-bottom: 1em;
+    }
+}

@@ -52,14 +52,15 @@ html {
     flex-wrap: wrap;
     align-items: center;
 }
-.header > nav > a + a {
-    margin-left: var(--spacing);
+.header > nav > a {
+    margin-right: var(--spacing);
 }
 .header > nav > a.active {
     color: #000;
 }
 .header > nav > a:last-child {
     margin-left: auto;
+    margin-right: 0;
 }
 
 .main {

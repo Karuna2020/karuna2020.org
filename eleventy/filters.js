@@ -3,13 +3,13 @@ const CleanCSS = require('clean-css')
 
 module.exports = {
     dateToFormat: function(date, format) {
-        return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat(
+        return DateTime.fromJSDate(date, { zone: 'Asia/Kolkata' }).toFormat(
             String(format)
         )
     },
 
     dateToISO: function(date) {
-        return DateTime.fromJSDate(date, { zone: 'utc' }).toISO({
+        return DateTime.fromJSDate(date, { zone: 'Asia/Kolkata' }).toISO({
             includeOffset: false,
             suppressMilliseconds: true
         })
