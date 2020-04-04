@@ -1,11 +1,6 @@
 <footer class="footer">
     <div>
-    {% if meta.email %}
-        <p><a href="mailto:{{ meta.email }}">{{ meta.email }}</a></p>
-    {% endif %}
-    {% if meta.telephone %}
-        <p><a href="tel:{{ meta.telephone }}">{{ meta.telephone }}</a></p>
-    {% endif %}
+        <p>© 2020 Karuna 2020</p>
     </div>
     <div>
         <p>Last Update: {{ build.timestamp | dateToFormat("dd LLLL yyyy, t") }}</p>
