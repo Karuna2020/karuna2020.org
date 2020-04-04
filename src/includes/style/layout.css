@@ -3,7 +3,7 @@ html {
 }
 
 .site {
-    display:flex;
+    display: flex;
     flex-direction: column;
     min-height: 100%;
     min-height: 100vh;
@@ -16,23 +16,32 @@ html {
 }
 
 .header {
-    flex:none;
-    color: #FFF;
+    flex: none;
+    color: #fff;
     background-color: var(--brand-color);
 }
 .header a {
     color: inherit;
 }
+.header .logo {
+    font-size: 150%;
+    text-decoration: none;
+}
+.header .logoheader {
+    height: 2em;
+    margin-right: 1em;
+}
+
 .main {
     flex: 1 0 auto;
 }
 
 .footer {
-    flex:none;
-    display:flex;
+    flex: none;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items:flex-end;
-    background-color: #F0F0F0;
-    border-top: 1px solid #D4D4D4;
+    align-items: flex-end;
+    background-color: #f0f0f0;
+    border-top: 1px solid #d4d4d4;
 }
