@@ -9,4 +9,4 @@ For just ₹750, the Karuna 2020 Dry Ration Pack can feed a family for a whole m
 
 ## Thank you
 
-We'd like to thank the contributors, without who Karuna 2020 wouldn't be possible:
+We'd like to thank the contributors, without whom Karuna 2020 wouldn't be possible:
