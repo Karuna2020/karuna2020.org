@@ -25,6 +25,8 @@ a.cta {
     color: #fff;
     padding: 0.5em 0.75em;
     border-radius: 0.25em;
+    display: inline-block;
+    line-height: 1.1;
 }
 a.cta:focus {
     outline-color: var(--brand-color);
