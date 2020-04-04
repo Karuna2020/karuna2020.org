@@ -58,6 +58,7 @@ module.exports = function(config) {
     config.addPassthroughCopy('admin')
     config.addPassthroughCopy('src/email')
     config.addPassthroughCopy('src/static')
+    config.addPassthroughCopy('src/CNAME')
     config.addPassthroughCopy('src/robots.txt')
 
     // Deep-Merge
