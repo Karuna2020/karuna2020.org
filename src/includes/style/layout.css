@@ -56,3 +56,14 @@ html {
     background-color: #f0f0f0;
     border-top: 1px solid #d4d4d4;
 }
+
+.impact {
+    max-width: 60ch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.impact > div > div:first-child {
+    font-size: 200%;
+    line-height: 1.25;
+}
