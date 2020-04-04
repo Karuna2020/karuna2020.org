@@ -21,10 +21,25 @@ const websiteData = socialMediaData.filter(i =>
 )
 
 websiteData.forEach(update => {
-    console.log(update.event)
-})
+    const updatePhotos = update.pictures.sort((a, b) =>
+        a.filename.localeCompare(b.filename)
+    )
+    let smoImage = 'https://cdn.karuna2020.org/logo-vertical.svg'
+    try {
+        smoImage = updatePhotos[0].thumbnails.large.url
+    } catch (error) {}
 
-// fs.writeFileSync(
-//     join('.', 'src', 'data', 'data', 'updates.json'),
-//     JSON.stringify(websiteData)
-// )
+    fs.writeFileSync(
+        join('.', 'src', 'updates', `${update.dateOfOccurence}.md`),
+        `---
+date: ${update.dateOfOccurence}
+title: ${update.event}
+smoImage: ${smoImage}
+---
+
+${update.notes}
+
+${updatePhotos.map(i => `![](${i.thumbnails.large.url})`).join('\n\n')}
+`
+    )
+})
