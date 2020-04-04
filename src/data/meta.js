@@ -10,11 +10,13 @@ const {
 } = process.env
 
 module.exports = {
-    title: META_TITLE || 'Emergency Site',
+    title: META_TITLE || 'Karuna 2020',
     url: META_URL || '',
-    description: META_DESC || 'An emergency information website.',
+    description:
+        META_DESC ||
+        'Karuna 2020 is an initiative to do our part in helping feed those most affected during COVID-19 in India.',
     lang: META_LANG || 'en',
-    primaryColor: META_COLOR || '#DB0000',
+    primaryColor: META_COLOR || '#c00058',
     email: META_EMAIL || undefined,
     telephone: META_TELEPHONE || undefined,
     dateFormat: 'dd LLLL yyyy'
