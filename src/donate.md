@@ -11,4 +11,4 @@ To contribute, use the following account details:
 -   **Branch:** Adchini
 -   **RTGS/NEST IFSC:** HDFC0004397
 
-If you've made a donation, you can fill the [Donor Details Form](https://go.karuna2020.org/donor) so that we can verify your donation and issue an 80G tax deduction receipt.
+Once you've made a donation, you can fill the [Donor Details Form](https://go.karuna2020.org/donor) so that we can verify your donation and issue an 80G tax deduction receipt.
