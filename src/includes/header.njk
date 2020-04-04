@@ -28,6 +28,7 @@
     <nav>
         <a {% if page.url == "/" %} class="active"{% endif %} href="/">Home</a>
         <a {% if "/about/" in page.url %} class="active"{% endif %} href="/about/">About</a>
+        <a {% if "/updates/" in page.url %} class="active"{% endif %} href="/updates/">Updates</a>
         <a {% if "/contributors/" in page.url %} class="active"{% endif %} href="/contributors/">Contributors</a>
         <a {% if "/volunteers/" in page.url %} class="active"{% endif %} href="/volunteers/">Volunteers</a>
         <a {% if "/api/" in page.url %} class="active"{% endif %} href="/api/">API</a>

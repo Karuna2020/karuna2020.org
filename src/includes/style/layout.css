@@ -110,3 +110,21 @@ html {
 .packlist span {
     display: block;
 }
+
+.heroquote p,
+.heroquote footer {
+    display: inline;
+}
+.heroquote {
+    border-left: 0.5em solid #ddd;
+    padding-left: 1.5em;
+}
+.heroquote footer::before {
+    content: '–';
+    margin-left: 1em;
+    margin-right: 0.25em;
+}
+
+.content ol.postlist {
+    padding: 0;
+}
