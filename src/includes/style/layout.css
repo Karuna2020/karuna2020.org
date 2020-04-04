@@ -58,6 +58,9 @@ html {
 .header > nav > a.active {
     color: #000;
 }
+.header > nav > a.cta.active {
+    color: #fff;
+}
 .header > nav > a:last-child {
     margin-left: auto;
     margin-right: 0;
