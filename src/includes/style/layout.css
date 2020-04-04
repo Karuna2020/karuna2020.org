@@ -45,17 +45,25 @@ html {
     height: 1.5em;
 }
 .header > nav {
-    padding: 1.5em var(--spacing);
+    padding: 0.5em var(--spacing);
     background-color: #f0f0f0;
     color: var(--brand-color);
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 .header > nav > a + a {
     margin-left: var(--spacing);
 }
 .header > nav > a.active {
     color: #000;
+}
+.header > nav > a:last-child {
+    margin-left: auto;
+    background-color: var(--brand-color);
+    color: #fff;
+    padding: 0.5em 0.75em;
+    border-radius: 0.25em;
 }
 
 .main {
