@@ -67,3 +67,24 @@ html {
     font-size: 200%;
     line-height: 1.25;
 }
+
+.packlist {
+    max-width: 60ch;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 1em;
+}
+.packlist li {
+    flex: 1 0 0;
+}
+.packlist li + li {
+    margin: 0;
+}
+.packlist img {
+    height: 2.5em;
+    display: inline-block;
+}
+.packlist span {
+    display: block;
+}
