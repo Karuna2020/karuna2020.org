@@ -60,10 +60,6 @@ html {
 }
 .header > nav > a:last-child {
     margin-left: auto;
-    background-color: var(--brand-color);
-    color: #fff;
-    padding: 0.5em 0.75em;
-    border-radius: 0.25em;
 }
 
 .main {

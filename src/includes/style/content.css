@@ -11,3 +11,22 @@
 .content ol {
     padding-left: 1em;
 }
+
+.content iframe {
+    margin-top: 3em;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    border-radius: 0.2em;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+}
+
+a.cta {
+    background-color: var(--brand-color);
+    color: #fff;
+    padding: 0.5em 0.75em;
+    border-radius: 0.25em;
+}
+a.cta:focus {
+    outline-color: var(--brand-color);
+    border-radius: 0;
+}
