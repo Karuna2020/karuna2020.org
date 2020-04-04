@@ -1,20 +1,35 @@
 <header class="header">
-    <a href="/" class="iconlink logo">
-        <img class="logoheader" alt="" src="https://cdn.karuna2020.org/icon-white.svg">
-        {{ meta.title }}
-    </a>
-    <nav class="socialmedia">
-        <a href="#" aria-label="Facebook">
-            {% include "icons/facebook.njk" %}
+    <div>
+        <a href="/" class="iconlink logo">
+            <img class="logoheader" alt="" src="https://cdn.karuna2020.org/icon-white.svg">
+            {{ meta.title }}
         </a>
-        <a href="#" aria-label="Instagram">
-            {% include "icons/instagram.njk" %}
-        </a>
-        <a href="#" aria-label="Twitter">
-            {% include "icons/twitter.njk" %}
-        </a>
-        <a href="#" aria-label="RSS feed">
-            {% include "icons/rss.njk" %}
-        </a>
+        <nav class="socialmedia">
+            <a href="https://www.facebook.com/Karuna2020" aria-label="Facebook">
+                {% include "icons/facebook.njk" %}
+            </a>
+            <a href="https://go.karuna2020.org/whatsapp" aria-label="WhatsApp">
+                {% include "icons/whatsapp.njk" %}
+            </a>
+            <a href="https://www.instagram.com/karuna2020_org" aria-label="Instagram">
+                {% include "icons/instagram.njk" %}
+            </a>
+            <a href="https://twitter.com/karuna2020_org" aria-label="Twitter">
+                {% include "icons/twitter.njk" %}
+            </a>
+            <a href="https://github.com/Karuna2020" aria-label="GitHub">
+                {% include "icons/github.njk" %}
+            </a>
+            <a href="/feed.xml" aria-label="RSS feed">
+                {% include "icons/rss.njk" %}
+            </a>
+        </nav>
+    </div>
+    <nav>
+        <a class="active" href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contributors</a>
+        <a href="#">Volunteers</a>
+        <a href="#">API</a>
     </nav>
 </header>

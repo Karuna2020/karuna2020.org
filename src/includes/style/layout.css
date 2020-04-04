@@ -9,19 +9,21 @@ html {
     min-height: 100vh;
 }
 
-.header,
 .main,
 .footer {
     padding: var(--spacing);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     color: #fff;
     background-color: var(--brand-color);
     line-height: 1;
+}
+.header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing);
 }
 .header a {
     color: inherit;
@@ -42,6 +44,16 @@ html {
 .header .socialmedia svg {
     height: 1.5em;
 }
+.header > nav {
+    padding: 1.5em var(--spacing);
+    background-color: #f0f0f0;
+    color: var(--brand-color);
+    display: flex;
+    flex-wrap: wrap;
+}
+.header > nav > a + a {
+    margin-left: var(--spacing);
+}
 
 .main {
     flex: 1 0 auto;
@@ -54,7 +66,6 @@ html {
     justify-content: space-between;
     align-items: flex-end;
     background-color: #f0f0f0;
-    border-top: 1px solid #d4d4d4;
 }
 
 .impact {
