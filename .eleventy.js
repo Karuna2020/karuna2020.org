@@ -2,6 +2,7 @@ const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginPWA = require('eleventy-plugin-pwa')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
+const safeLinks = require('eleventy-plugin-safe-external-links')
 
 const filters = require('./eleventy/filters.js')
 const transforms = require('./eleventy/transforms.js')
@@ -21,6 +22,7 @@ module.exports = function(config) {
     // Plugins
     config.addPlugin(pluginRss)
     config.addPlugin(pluginPWA, workboxOptions)
+    config.addPlugin(safeLinks)
 
     // Filters
     Object.keys(filters).forEach(filterName => {
