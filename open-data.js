@@ -30,7 +30,18 @@ websiteData.forEach(update => {
     } catch (error) {}
 
     fs.writeFileSync(
-        join('.', 'src', 'updates', `${update.dateOfOccurence}.md`),
+        join(
+            '.',
+            'src',
+            'updates',
+            `${update.dateOfOccurence}-${update.event
+                .toLowerCase()
+                .replace(/\s+/g, '-')
+                .replace(/[^\w\-]+/g, '')
+                .replace(/\-\-+/g, '-')
+                .replace(/^-+/, '')
+                .replace(/-+$/, '')}.md`
+        ),
         `---
 date: ${update.dateOfOccurence}
 title: ${update.event}
