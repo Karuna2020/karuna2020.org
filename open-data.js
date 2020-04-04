@@ -19,7 +19,12 @@ const socialMediaData = JSON.parse(
 const websiteData = socialMediaData.filter(i =>
     ['Publish to website'].includes(i.status)
 )
-fs.writeFileSync(
-    join('.', 'src', 'data', 'data', 'updates.json'),
-    JSON.stringify(websiteData)
-)
+
+websiteData.forEach(update => {
+    console.log(update.event)
+})
+
+// fs.writeFileSync(
+//     join('.', 'src', 'data', 'data', 'updates.json'),
+//     JSON.stringify(websiteData)
+// )

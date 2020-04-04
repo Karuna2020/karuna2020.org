@@ -3,3 +3,4 @@ dist
 .env
 open-data/
 src/data/data/
+src/updates/*.md
