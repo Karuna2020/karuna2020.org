@@ -1,0 +1,154 @@
+html {
+    overflow-y: scroll;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+.main,
+.footer {
+    padding: var(--spacing);
+}
+
+.header {
+    color: #fff;
+    background-color: var(--brand-color);
+    line-height: 1;
+}
+.header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing);
+}
+.header a {
+    color: inherit;
+}
+.header .logo {
+    font-size: 150%;
+    text-decoration: none;
+}
+.header .logoheader {
+    height: 2em;
+    margin-right: 1em;
+}
+.header .socialmedia a {
+    text-decoration: none;
+    margin-left: 1em;
+    display: inline-block;
+}
+.header .socialmedia svg {
+    height: 1.5em;
+}
+.header > nav {
+    padding: 0.5em var(--spacing);
+    background-color: #f0f0f0;
+    color: var(--brand-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.header > nav > a {
+    margin-right: var(--spacing);
+}
+.header > nav > a.active {
+    color: #000;
+}
+.header > nav > a.cta.active {
+    color: #fff;
+}
+.header > nav > a:last-child {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: #f0f0f0;
+}
+
+.impact {
+    max-width: 60ch;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.impact > div > div:first-child {
+    font-size: 200%;
+    line-height: 1.25;
+}
+
+.packlist {
+    max-width: 60ch;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 1em;
+}
+.packlist li {
+    flex: 1 0 0;
+}
+.packlist li + li {
+    margin: 0;
+}
+.packlist img {
+    height: 2.5em;
+    display: inline-block;
+}
+.packlist span {
+    display: block;
+}
+
+.heroquote p,
+.heroquote footer {
+    display: inline;
+}
+.heroquote {
+    border-left: 0.5em solid #ddd;
+    padding-left: 1.5em;
+}
+.heroquote footer::before {
+    content: '–';
+    margin-left: 1em;
+    margin-right: 0.25em;
+}
+
+.content ol.postlist {
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: none;
+}
+table th {
+    font-weight: 600;
+}
+table td,
+table th {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+table tr {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+table tr:nth-child(2n) td {
+    background-color: rgba(0, 0, 0, 0.05);
+}
