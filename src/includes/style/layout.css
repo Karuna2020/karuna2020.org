@@ -128,3 +128,27 @@ html {
 .content ol.postlist {
     padding: 0;
 }
+
+table {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow-x: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: none;
+}
+table th {
+    font-weight: 600;
+}
+table td,
+table th {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+}
+table tr {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+table tr:nth-child(2n) td {
+    background-color: rgba(0, 0, 0, 0.05);
+}

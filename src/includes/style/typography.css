@@ -37,20 +37,6 @@ a:hover {
 a:focus {
     outline: 5px solid;
 }
-table {
-    display: block;
-    width: fit-content;
-    max-width: 100%;
-    overflow-x: auto;
-    text-align: left;
-    font-size: 1.125rem;
-    border-collapse: collapse;
-}
-table th,
-table td {
-    border: 1px solid;
-    padding: 0.125em 0.25em;
-}
 button {
     font-weight: bold;
     text-transform: uppercase;
