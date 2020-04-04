@@ -3,7 +3,7 @@ const { join } = require('path')
 
 console.log('Setting up open data')
 
-fs.mkdirSync(join('.', 'src', 'data', 'open-data'), { recursive: true })
+fs.mkdirSync(join('.', 'src', 'data', 'data'), { recursive: true })
 fs.copyFileSync(
     join('.', 'open-data', 'summary.json'),
     join('.', 'src', 'data', 'data', 'summary.json')
