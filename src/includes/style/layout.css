@@ -54,6 +54,9 @@ html {
 .header > nav > a + a {
     margin-left: var(--spacing);
 }
+.header > nav > a.active {
+    color: #000;
+}
 
 .main {
     flex: 1 0 auto;
