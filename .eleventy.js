@@ -7,15 +7,6 @@ const safeLinks = require('eleventy-plugin-safe-external-links')
 const filters = require('./eleventy/filters.js')
 const transforms = require('./eleventy/transforms.js')
 
-const workboxOptions = {
-    cacheId: 'emergency-site',
-    swDest: './dist/sw.js',
-    globPatterns: ['**/*.html', 'static/scripts/offline.js'],
-    globIgnores: ['admin/**/*', '404/**/*'],
-    importScripts: ['/static/scripts/worker.js'],
-    skipWaiting: false
-}
-
 require('dotenv').config()
 
 module.exports = function(config) {
@@ -24,7 +15,6 @@ module.exports = function(config) {
 
     // Plugins
     config.addPlugin(pluginRss)
-    config.addPlugin(pluginPWA, workboxOptions)
     config.addPlugin(safeLinks)
 
     // Filters
