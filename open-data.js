@@ -13,6 +13,13 @@ fs.copyFileSync(
     join('.', 'src', 'data', 'data', 'amount-received.json')
 )
 
+fs.readdirSync(join('.', 'open-data', 'guides')).forEach(file =>
+    fs.copyFileSync(
+        join('.', 'open-data', 'guides', file),
+        join('.', 'src', 'guides', file)
+    )
+)
+
 const socialMediaData = JSON.parse(
     fs.readFileSync(join('.', 'open-data', 'social-media-outreach.json'))
 )
