@@ -76,6 +76,11 @@ function showNewVersionNotice() {
     content.appendChild(msg)
     content.appendChild(updateBtn)
     content.classList.add('prompt')
+    setTimeout(() => {
+        try {
+            updateBtn.click()
+        } catch (error) {}
+    }, 250)
 
     new Notification(content)
 }
