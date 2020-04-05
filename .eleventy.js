@@ -37,6 +37,23 @@ module.exports = function(config) {
         config.addTransform(transformName, transforms[transformName])
     })
 
+    // Collections
+    config.addCollection('updates', collection => {
+        return collection
+            .getAll()
+            .filter(item => item.filePathStem.includes('updates/'))
+            .sort(
+                (a, b) =>
+                    new Date(b.date).getTime() - new Date(a.date).getTime()
+            )
+    })
+    config.addCollection('guides', collection => {
+        return collection
+            .getAll()
+            .filter(item => item.filePathStem.includes('guides/'))
+            .sort((a, b) => a.data.title.localeCompare(b.data.title))
+    })
+
     // Markdown
     const mdlib = markdownIt({
         html: true,

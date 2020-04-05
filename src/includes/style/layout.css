@@ -152,3 +152,8 @@ table tr {
 table tr:nth-child(2n) td {
     background-color: rgba(0, 0, 0, 0.05);
 }
+
+.author {
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
