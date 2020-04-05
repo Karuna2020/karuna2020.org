@@ -7,8 +7,8 @@
         "watch": "eleventy --watch",
         "serve": "eleventy --serve",
         "debug": "DEBUG=* eleventy",
-        "clean": "del-cli dist && del-cli open-data",
-        "fetch": "git clone https://github.com/Karuna2020/open-data && node open-data.js",
+        "clean": "del-cli dist",
+        "fetch": "del-cli open-data && git clone https://github.com/Karuna2020/open-data && node open-data.js",
         "start": "npm run clean && npm run serve"
     },
     "repository": {
