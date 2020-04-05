@@ -14,6 +14,7 @@ const redirects = fs
     )
 
 redirects.forEach(redirect => {
+    fs.mkdirSync(join('.', 'dist', from), { recursive: true })
     const from = redirect[0]
     const to = redirect[1].startsWith('/')
         ? `https://karuna2020.org${redirect[1]}`
