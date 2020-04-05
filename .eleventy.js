@@ -36,12 +36,14 @@ module.exports = function(config) {
                 (a, b) =>
                     new Date(b.date).getTime() - new Date(a.date).getTime()
             )
+            .reverse()
     })
     config.addCollection('guides', collection => {
         return collection
             .getAll()
             .filter(item => item.filePathStem.includes('guides/'))
             .sort((a, b) => a.data.title.localeCompare(b.data.title))
+            .reverse()
     })
 
     // Markdown

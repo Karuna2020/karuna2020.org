@@ -40,6 +40,20 @@ websiteData.forEach(update => {
         smoImage = updatePhotos[0].thumbnails.large.url
     } catch (error) {}
 
+    let distribution = {}
+
+    const distributions = update.linkedDistribution
+    if (distributions.length) {
+        distributions.forEach(distribution => {
+            try {
+                distribution = JSON.parse(
+                    fs.readFileSync(join('.', 'open-data', 'distribution.json'))
+                ).filter(d => d.id === distribution)
+            } catch (error) {}
+        })
+    }
+    console.log(distribution)
+
     fs.writeFileSync(
         join(
             '.',
