@@ -21,17 +21,22 @@ var walkSync = function(dir, filelist) {
 }
 
 const generate = async () => {
-    const files = walkSync(join('.', 'dist', 'updates'))
+    const files = walkSync(join('.', 'dist')).filter(i => i.endsWith('.html'))
+
     for await (const file of files) {
         const fileName =
             file.replace('/index.html', '').replace(/\//g, '_') + '.png'
         const html = fs.readFileSync(file).toString()
         console.log(file)
 
-        const title = html
-            .split('<title>')[1]
-            .split('</title>')[0]
-            .split(' | ')[0]
+        let title = ''
+        try {
+            title = html
+                .split('<title>')[1]
+                .split('</title>')[0]
+                .split(' | ')[0]
+            if (title === 'Karuna 2020') title = ''
+        } catch (error) {}
 
         let image = ''
         try {
