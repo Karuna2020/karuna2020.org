@@ -12,6 +12,10 @@ fs.copyFileSync(
     join('.', 'open-data', 'amount-received.json'),
     join('.', 'src', 'data', 'data', 'amount-received.json')
 )
+fs.copyFileSync(
+    join('.', 'open-data', 'volunteers.json'),
+    join('.', 'src', 'data', 'data', 'volunteers.json')
+)
 
 fs.readdirSync(join('.', 'open-data', 'guides')).forEach(file =>
     fs.copyFileSync(
