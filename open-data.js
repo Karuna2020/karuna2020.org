@@ -52,9 +52,7 @@ websiteData.forEach(update => {
         })
     }
 
-    console.log(update.distribution)
-
-    if (update.distribution)
+    if (update.distribution && update.distribution.date)
         fs.writeFileSync(
             join(
                 '.',
