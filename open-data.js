@@ -74,7 +74,11 @@ smoImage: ${smoImage}
 
 ${update.notes}
 
-${updatePhotos.map(i => `![](${i.thumbnails.large.url})`).join('\n\n')}
+<div class="mainImages">
+${updatePhotos
+    .map(i => `<img alt="" src="${i.thumbnails.large.url}">`)
+    .join('\n')}
+</div>
 
 ## Distribution
 

@@ -157,3 +157,21 @@ table tr:nth-child(2n) td {
     margin-bottom: 1em;
     margin-top: 0.5em;
 }
+
+.mainImages {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.mainImages img {
+    display: inline-block;
+    height: 20em;
+}
+.distributionimages {
+    display: flex;
+    flex-wrap: wrap;
+}
+.distributionimages img {
+    height: 10em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
