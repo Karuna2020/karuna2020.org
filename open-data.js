@@ -52,7 +52,7 @@ websiteData.forEach(update => {
         })
     }
 
-    if (update.distribution && update.distribution.date)
+    if (update.distribution && update.distribution.deliveredOn)
         fs.writeFileSync(
             join(
                 '.',
