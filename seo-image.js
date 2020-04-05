@@ -42,7 +42,7 @@ const generate = async () => {
         try {
             const images = html
                 .split('\n')
-                .filter(line => line.startsWith('<p><img src="'))
+                .filter(line => line.startsWith('<img src="'))
             const lastImage = images.pop()
             image = lastImage.split('src="')[1].split('"')[0]
         } catch (error) {}
