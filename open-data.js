@@ -58,7 +58,7 @@ websiteData.forEach(update => {
                 '.',
                 'src',
                 'updates',
-                `${update.distribution.deliveredOn}-${update.event
+                `${update.event
                     .toLowerCase()
                     .replace(/\s+/g, '-')
                     .replace(/[^\w\-]+/g, '')
