@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "A boilerplate for emergency information websites",
     "scripts": {
-        "build": "npm run clean && npm run fetch && cross-env ELEVENTY_ENV=production eleventy",
+        "build": "npm run clean && npm run fetch && cross-env ELEVENTY_ENV=production eleventy && npm run seo-image.js",
         "watch": "eleventy --watch",
         "serve": "eleventy --serve",
         "debug": "DEBUG=* eleventy",
