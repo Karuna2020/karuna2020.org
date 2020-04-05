@@ -40,35 +40,36 @@ websiteData.forEach(update => {
         smoImage = updatePhotos[0].thumbnails.large.url
     } catch (error) {}
 
-    let distribution = {}
-
     const distributions = update.linkedDistribution
     if (distributions.length) {
         distributions.forEach(distribution => {
             try {
-                distribution = JSON.parse(
+                const result = JSON.parse(
                     fs.readFileSync(join('.', 'open-data', 'distribution.json'))
-                ).filter(d => d.id === distribution)
+                ).filter(d => d._id === distribution)[0]
+                update.distribution = { ...result }
             } catch (error) {}
         })
     }
-    console.log(distribution)
 
-    fs.writeFileSync(
-        join(
-            '.',
-            'src',
-            'updates',
-            `${update.dateOfOccurence}-${update.event
-                .toLowerCase()
-                .replace(/\s+/g, '-')
-                .replace(/[^\w\-]+/g, '')
-                .replace(/\-\-+/g, '-')
-                .replace(/^-+/, '')
-                .replace(/-+$/, '')}.md`
-        ),
-        `---
-date: ${update.dateOfOccurence}
+    console.log(update.distribution)
+
+    if (update.distribution)
+        fs.writeFileSync(
+            join(
+                '.',
+                'src',
+                'updates',
+                `${update.distribution.deliveredOn}-${update.event
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .replace(/[^\w\-]+/g, '')
+                    .replace(/\-\-+/g, '-')
+                    .replace(/^-+/, '')
+                    .replace(/-+$/, '')}.md`
+            ),
+            `---
+date: ${update.distribution.deliveredOn}
 title: ${update.event}
 smoImage: ${smoImage}
 ---
@@ -76,6 +77,15 @@ smoImage: ${smoImage}
 ${update.notes}
 
 ${updatePhotos.map(i => `![](${i.thumbnails.large.url})`).join('\n\n')}
+
+## Distribution
+
+<div class="distributionimages">
+${(update.distribution.distributionPictures || [])
+    .filter(i => i.thumbnails)
+    .map(i => `<img alt="" src="${i.thumbnails.large.url}">`)
+    .join('\n')}
+</div>
 `
-    )
+        )
 })
