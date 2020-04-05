@@ -14,11 +14,11 @@ const redirects = fs
     )
 
 redirects.forEach(redirect => {
-    fs.mkdirSync(join('.', 'dist', from), { recursive: true })
     const from = redirect[0]
     const to = redirect[1].startsWith('/')
         ? `https://karuna2020.org${redirect[1]}`
         : redirect[1]
+    fs.mkdirSync(join('.', 'dist', from), { recursive: true })
     fs.writeFileSync(
         join('.', 'dist', from, 'index.html'),
         `<!doctype html>
