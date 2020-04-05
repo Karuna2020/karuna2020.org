@@ -4,3 +4,4 @@ dist
 open-data/
 src/data/data/
 src/updates/*.md
+src/guides/*.md
