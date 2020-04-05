@@ -1,5 +1,5 @@
 <ol class="postlist" reversed>
-{% for post in collections.posts | reverse %}
+{% for post in collections.updates | reverse %}
     {% if loop.index <= 5 %}
         <li>
             <a href="{{ post.url | url }}">{{ post.data.title }}</a>

@@ -9,7 +9,7 @@ layout: base
     <div class="content">
         {{ content | safe }}
         <ol class="postlist" reversed>
-        {% for post in collections.updates | reverse %}
+        {% for post in collections.guides | reverse %}
             <li>
                 <a href="{{ post.url | url }}">{{ post.data.title }}</a>
                 <time datetime="{{ post.date | dateToFormat('yyyy-LL-dd') }}">
