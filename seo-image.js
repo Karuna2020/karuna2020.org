@@ -52,6 +52,7 @@ const generate = async () => {
                     width: 1200px;
                     padding: 100px;
                     margin: 0;
+                    box-sizing: border-box;
                     height: 630px;
                     font-size: 24px;
                     font-family: sans-serif;
@@ -114,7 +115,7 @@ const generate = async () => {
                 .toString()
                 .replace(
                     '<title>',
-                    '<meta property="og:image" content="https://karuna2020.org/seo-images/' +
+                    '<meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image" content="https://karuna2020.org/seo-images/' +
                         fileName +
                         '"><title>'
                 )
