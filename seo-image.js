@@ -114,10 +114,12 @@ const generate = async () => {
                 .readFileSync(file)
                 .toString()
                 .replace(
-                    '<title>',
-                    '<meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image" content="https://karuna2020.org/seo-images/' +
+                    '</title>',
+                    '<title><meta name="twitter:image" content="https://karuna2020.org/seo-images/' +
                         fileName +
-                        '"><title>'
+                        '"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image" content="https://karuna2020.org/seo-images/' +
+                        fileName +
+                        '">'
                 )
         )
     }
