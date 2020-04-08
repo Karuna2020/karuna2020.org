@@ -23,6 +23,14 @@ To contribute using a bank transfer, use the following account details:
 -   **Branch:** Adchini
 -   **RTGS/NEST IFSC:** HDFC0004397
 
+## Cheque
+
+If you wish to deposit a cheque, make sure you follow the NEFT process of your local bank; we suggest you write the cheque as follows:
+
+-   **Pay:** "Yourself — NEFT remittance"
+-   On the back side of the cheque, write the name of the beneficiary account, account number, bank, branch, and IFSC available above under "RTGS or NEFT"
+-   Make sure you wash your hands after handing the cheque
+
 ## 80G tax deduction receipt
 
 Once you've made a donation, please fill the [Donor Details Form](https://go.karuna2020.org/donor) so that we can verify your donation and issue an 80G tax deduction receipt. **Please note that we won't be able to provide a receipt unless you fill the form**, because we wouldn't be able to contact you for the required documentation.
