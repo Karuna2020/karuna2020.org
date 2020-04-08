@@ -41,7 +41,7 @@ websiteData.forEach(update => {
     } catch (error) {}
 
     const distributions = update.linkedDistribution
-    if (distributions.length) {
+    if (distributions && distributions.length) {
         distributions.forEach(distribution => {
             try {
                 const result = JSON.parse(
@@ -69,7 +69,7 @@ websiteData.forEach(update => {
                     .replace(/-+$/, '')}.md`
             ),
             `---
-date: ${(update.distribution.deliveredOn || update.date)}
+date: ${update.distribution.deliveredOn || update.date}
 title: ${update.event}
 smoImage: ${smoImage}
 ---
