@@ -53,6 +53,8 @@ websiteData.forEach(update => {
     }
 
     if (update.distribution && update.distribution.deliveredOn)
+        console.log("Adding update", update.event);
+    if (update.distribution && update.distribution.deliveredOn)
         fs.writeFileSync(
             join(
                 '.',
