@@ -8,19 +8,19 @@ layout: base
     
     <div class="content">
         {{ content | safe }}
-        <ol class="postlist partnerslist">
-        {% for post in collections.partners %}
-            <li>
-                <a href="{{ post.url | url }}">
-                    {% if post.data.logo %}
-                        <img alt="" src="{{ post.data.logo }}">
-                    {% endif %}
-                    <div>{{ post.data.title }}</div>
-                </a>
-            </li>
-        {% endfor %}
-        </ol>
     </div>
+    <ol class="postlist partnerslist">
+    {% for post in collections.partners %}
+        <li>
+            <a href="{{ post.url | url }}">
+                {% if post.data.logo %}
+                    <img alt="" src="{{ post.data.logo }}">
+                {% endif %}
+                <div>{{ post.data.title }}</div>
+            </a>
+        </li>
+    {% endfor %}
+    </ol>
 
     <footer>
         <a href="/" class="iconlink">

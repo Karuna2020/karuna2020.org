@@ -8,17 +8,15 @@ layout: base
     
     <div class="content">
         {{ content | safe }}
-        <table>
-          <tbody>
-            {% for person in data.volunteers %}
-            <tr class="postlist">
-                <td>{{ person.name }}</td>
-                <td>{{ person.location }}</td>
-                <td>{{ person.areaOfWorkAllocated }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+    </div>
+    <div class="people">
+        {% for person in data.volunteers %}{% if person.name %}
+        <div class="postlist">
+            <div><img alt="" src="https://www.gravatar.com/avatar/{{ person.emailMd5 }}?d=https%3A%2F%2Fui-avatars.com%2Fapi%2F/{{ person.name | urlencode }}/128"></div>
+            <div>{{ person.name }}</div>
+            <div>{{ person.areaOfWorkAllocated }}</div>
+        </div>
+        {% endif %}{% endfor %}
     </div>
 
     <footer>

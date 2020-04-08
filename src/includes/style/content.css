@@ -33,11 +33,28 @@ a.cta:focus {
     border-radius: 0;
 }
 
-.partnerslist {
+.partnerslist,
+.people {
     display: flex;
     text-align: center;
     flex-wrap: wrap;
     line-height: 1.25;
+}
+.people > div {
+    width: 10em;
+    margin: 1em;
+    max-width: 100%;
+    font-size: 90%;
+}
+.people .postlist div:nth-child(2) {
+    font-weight: bold;
+    margin-bottom: 0.1em;
+}
+.people img {
+    border-radius: 100%;
+    width: 3.33em;
+    margin: 0 auto 1em;
+    display: block;
 }
 .partnerslist li {
     width: 10em;
@@ -59,4 +76,11 @@ a.cta:focus {
     font-size: 75%;
     margin-top: 1em;
     opacity: 0.75;
+}
+
+@media (max-width: 500px) {
+    .people > div,
+    .partnerslist li {
+        width: 100%;
+    }
 }
