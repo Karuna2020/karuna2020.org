@@ -8,8 +8,8 @@ layout: base
     
     <div class="content">
         {{ content | safe }}
-        <ol class="postlist partnerslist" reversed>
-        {% for post in collections.partners | reverse %}
+        <ol class="postlist partnerslist">
+        {% for post in collections.partners %}
             <li>
                 <a href="{{ post.url | url }}">
                     {% if post.data.logo %}

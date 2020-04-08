@@ -8,7 +8,7 @@ layout: base
     
     <div class="content">
         {{ content | safe }}
-        <ol class="postlist" reversed>
+        <ol class="postlist">
         {% for post in collections.guides | reverse %}
             <li>
                 <a href="{{ post.url | url }}">{{ post.data.title }}</a>
