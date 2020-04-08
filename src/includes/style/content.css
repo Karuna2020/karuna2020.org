@@ -32,3 +32,31 @@ a.cta:focus {
     outline-color: var(--brand-color);
     border-radius: 0;
 }
+
+.partnerslist {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    line-height: 1.25;
+}
+.partnerslist li {
+    width: 10em;
+    margin: 1em;
+    max-width: 100%;
+}
+.partnerslist img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+.partnerslist a {
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 1em;
+    display: block;
+}
+.partnerslist div {
+    font-size: 75%;
+    margin-top: 1em;
+    opacity: 0.75;
+}
