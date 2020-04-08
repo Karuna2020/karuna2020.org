@@ -123,6 +123,6 @@ title: ${partner.brandName}${logo ? `\nlogo: ${logo}` : ''}
 
 ${partner.description || ''}
 
-<a class="cta" href="#">Visit ${partner.brandName} →</a>`
+<a class="cta" href="${partner.website}">Visit ${partner.brandName} →</a>`
     )
 })
