@@ -52,9 +52,9 @@ websiteData.forEach(update => {
         })
     }
 
-    if (update.distribution && update.distribution.deliveredOn)
+    if (update.distribution && (update.distribution.deliveredOn || update.date))
         console.log('Adding update', update.event)
-    if (update.distribution && update.distribution.deliveredOn)
+    if (update.distribution && (update.distribution.deliveredOn || update.date))
         fs.writeFileSync(
             join(
                 '.',
@@ -69,7 +69,7 @@ websiteData.forEach(update => {
                     .replace(/-+$/, '')}.md`
             ),
             `---
-date: ${update.distribution.deliveredOn}
+date: ${(update.distribution.deliveredOn || update.date)}
 title: ${update.event}
 smoImage: ${smoImage}
 ---
