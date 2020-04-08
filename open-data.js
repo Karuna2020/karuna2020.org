@@ -94,3 +94,35 @@ ${(update.distribution.distributionPictures || [])
 `
         )
 })
+
+const partnersData = JSON.parse(
+    fs.readFileSync(join('.', 'open-data', 'partners.json'))
+)
+partnersData.forEach(partner => {
+    console.log('Adding partner', partner.brandName)
+    let logo = ''
+    try {
+        logo = partner.logo[0].thumbnails.large.url
+    } catch (error) {}
+    fs.writeFileSync(
+        join(
+            '.',
+            'src',
+            'partners',
+            `${partner.brandName
+                .toLowerCase()
+                .replace(/\s+/g, '-')
+                .replace(/[^\w\-]+/g, '')
+                .replace(/\-\-+/g, '-')
+                .replace(/^-+/, '')
+                .replace(/-+$/, '')}.md`
+        ),
+        `---
+title: ${partner.brandName}${logo ? `\nlogo: ${logo}` : ''}
+---
+
+${partner.description || ''}
+
+<a class="cta" href="#">Visit ${partner.brandName} →</a>`
+    )
+})
