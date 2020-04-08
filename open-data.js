@@ -52,9 +52,9 @@ websiteData.forEach(update => {
         })
     }
 
-    if (update.distribution && (update.distribution.deliveredOn || update.date))
+    if ((update.distribution || {}).deliveredOn || update.date)
         console.log('Adding update', update.event)
-    if (update.distribution && (update.distribution.deliveredOn || update.date))
+    if ((update.distribution || {}).deliveredOn || update.date)
         fs.writeFileSync(
             join(
                 '.',
@@ -69,7 +69,7 @@ websiteData.forEach(update => {
                     .replace(/-+$/, '')}.md`
             ),
             `---
-date: ${update.distribution.deliveredOn || update.date}
+date: ${(update.distribution || {}).deliveredOn || update.date}
 title: ${update.event}
 smoImage: ${smoImage}
 ---
@@ -86,7 +86,7 @@ ${updatePhotos
 ## Distribution
 
 <div class="distributionimages">
-${(update.distribution.distributionPictures || [])
+${((update.distribution || {}).distributionPictures || [])
     .filter(i => i.thumbnails)
     .map(i => `<img alt="" src="${i.thumbnails.large.url}">`)
     .join('\n')}
