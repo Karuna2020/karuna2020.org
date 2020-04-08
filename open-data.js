@@ -53,7 +53,7 @@ websiteData.forEach(update => {
     }
 
     if (update.distribution && update.distribution.deliveredOn)
-        console.log("Adding update", update.event);
+        console.log('Adding update', update.event)
     if (update.distribution && update.distribution.deliveredOn)
         fs.writeFileSync(
             join(
@@ -78,6 +78,7 @@ ${update.notes}
 
 <div class="mainImages">
 ${updatePhotos
+    .filter(i => i.thumbnails)
     .map(i => `<img alt="" src="${i.thumbnails.large.url}">`)
     .join('\n')}
 </div>
