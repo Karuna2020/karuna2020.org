@@ -13,9 +13,7 @@ Our Open Data API, as the name suggests, is completely open — CORS-enabled, wi
 
 These are webhook triggers you can use to re-build our API data and website. Please use them responsibly.
 
--   <button data-trigger="airtable">Update data from Airtable</button>
--   <button data-trigger="sheets">Update data from Google Sheets</button>
--   <button data-trigger="site">Build and deploy site</button>
+-   <button data-trigger="sheets">Update data and deploy site</button>
 
 <script>
 var waiting = false;
