@@ -41,6 +41,9 @@ html {
     margin-left: 1em;
     display: inline-block;
 }
+.header .socialmedia a:first-of-type {
+    margin-left: 0;
+}
 .header .socialmedia svg {
     height: 1.5em;
 }
