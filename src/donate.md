@@ -3,7 +3,13 @@ title: Donate
 layout: page
 ---
 
-You can donate using UPI or RTGS/NEFT bank transfer. Once you've made a donation, fill the [Donor Details Form](https://go.karuna2020.org/donor) so that we can verify your donation and issue an 80G tax deduction receipt.
+For just ₹750, the Karuna 2020 Dry Ration Pack can sustain a family for a whole month. You can donate using UPI or RTGS/NEFT bank transfer. Once you've made a donation, fill the [Donor Details Form](https://go.karuna2020.org/donor) so that we can verify your donation and issue an 80G tax deduction receipt.
+
+| Donation | Impact                     |
+| -------- | -------------------------- |
+| ₹750     | 1 family (4–5 people)      |
+| ₹3,000   | 4 families (16–20 people)  |
+| ₹7,500   | 10 families (40–50 people) |
 
 ## UPI
 
