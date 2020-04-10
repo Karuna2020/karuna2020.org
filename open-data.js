@@ -8,9 +8,17 @@ fs.copyFileSync(
     join('.', 'open-data', 'summary.json'),
     join('.', 'src', 'data', 'data', 'summary.json')
 )
-fs.copyFileSync(
-    join('.', 'open-data', 'amount-received.json'),
-    join('.', 'src', 'data', 'data', 'amount-received.json')
+fs.writeFileSync(
+    join('.', 'src', 'data', 'data', 'donations.json'),
+    JSON.stringify(
+        JSON.parse(
+            fs.readFileSync(join('.', 'open-data', 'donations.json'))
+        ).sort(
+            (a, b) =>
+                new Date(b.date || 100).getTime() -
+                new Date(a.date || 100).getTime()
+        )
+    )
 )
 fs.copyFileSync(
     join('.', 'open-data', 'volunteers.json'),

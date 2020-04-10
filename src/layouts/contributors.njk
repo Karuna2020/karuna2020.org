@@ -9,11 +9,19 @@ layout: base
     <div class="content">
         {{ content | safe }}
         <table>
+          <thead>
+            <tr>
+              <th>Amount</th>
+              <th>Donor</th>
+              <th>Impact</th>
+            </tr>
+          </thead>
           <tbody>
-            {% for person in data["amount-received"] %}
+            {% for person in data.donations %}
             <tr class="postlist">
-                <td>{{ person.amount }}</td>
-                <td>{{ person.contributorName }}</td>
+                <td>₹{{ person.amount | numberify }}</td>
+                <td>{{ person.name }}</td>
+                <td>{{ (person.amount / 750) | round }} famil{% if ((person.amount / 750) | round) == 1 %}y{% else %}ies{% endif %} ({{ ((person.amount / 750) * 4) | round }}–{{ ((person.amount / 750) * 5) | round }} people)</td>
             </tr>
             {% endfor %}
           </tbody>

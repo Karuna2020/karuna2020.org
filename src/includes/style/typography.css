@@ -7,6 +7,10 @@ body {
     font-size: var(--font-size, 1rem);
 }
 
+::selection {
+    background-color: #f2b8cc;
+}
+
 h1,
 h2,
 h3,

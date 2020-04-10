@@ -9,4 +9,4 @@ For just ₹750, the Karuna 2020 Dry Ration Pack can sustain a family for a whol
 
 ## Thank you
 
-We'd like to thank the contributors, without whom Karuna 2020 wouldn't be possible:
+We've raised **₹{{ data.summary.totalAmountRaised | numberify }}** from **{{ data.summary.numberOfContributors | numberify }} contributors**, without whom Karuna 2020 wouldn't be possible, which has helped sustain **{{ data.summary.numberOfKitDistributionsCompleted | numberify }} families**:
