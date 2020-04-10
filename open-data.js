@@ -102,7 +102,7 @@ ${
             .map(i => i.trim()),
 
         ...((update.distribution || {}).distributionPictures || [])
-    ].length
+    ].filter(i => i).length
         ? `
 ## Distribution
 
@@ -114,6 +114,7 @@ ${[
 
     ...((update.distribution || {}).distributionPictures || [])
 ]
+    .filter(i => i)
     .filter(i => typeof i === 'string' || i.thumbnails)
     .map(
         i =>
