@@ -32,9 +32,16 @@ const websiteData = socialMediaData.filter(i =>
 )
 
 websiteData.forEach(update => {
-    const updatePhotos = update.pictures.sort((a, b) =>
-        a.filename.localeCompare(b.filename)
-    )
+    let updatePhotos = [
+        ...(update.cdnImages || '').split(',').map(i => i.trim())
+    ]
+    if (update.pictures) {
+        updatePhotos.push(
+            ...update.pictures.sort((a, b) =>
+                a.filename.localeCompare(b.filename)
+            )
+        )
+    }
     let smoImage = 'https://cdn.karuna2020.org/logo-vertical.svg'
     try {
         smoImage = updatePhotos[0].thumbnails.large.url
@@ -78,19 +85,47 @@ ${update.notes}
 
 <div class="mainImages">
 ${updatePhotos
-    .filter(i => i.thumbnails)
-    .map(i => `<img alt="" src="${i.thumbnails.large.url}">`)
+    .filter(i => typeof i === 'string' || i.thumbnails)
+    .map(
+        i =>
+            `<img alt="" src="${
+                typeof i === 'string' ? i : i.thumbnails.large.url
+            }">`
+    )
     .join('\n')}
 </div>
 
+${
+    [
+        ...((update.distribution || {}).cdnImages || '')
+            .split(',')
+            .map(i => i.trim()),
+
+        ...((update.distribution || {}).distributionPictures || [])
+    ].length
+        ? `
 ## Distribution
 
 <div class="distributionimages">
-${((update.distribution || {}).distributionPictures || [])
-    .filter(i => i.thumbnails)
-    .map(i => `<img alt="" src="${i.thumbnails.large.url}">`)
+${[
+    ...((update.distribution || {}).cdnImages || '')
+        .split(',')
+        .map(i => i.trim()),
+
+    ...((update.distribution || {}).distributionPictures || [])
+]
+    .filter(i => typeof i === 'string' || i.thumbnails)
+    .map(
+        i =>
+            `<img alt="" src="${
+                typeof i === 'string' ? i : i.thumbnails.large.url
+            }">`
+    )
     .join('\n')}
 </div>
+`
+        : ''
+}
 `
         )
 })
@@ -103,6 +138,10 @@ partnersData.forEach(partner => {
     let logo = ''
     try {
         logo = partner.logo[0].thumbnails.large.url
+    } catch (error) {}
+    try {
+        const cdnImage = partner.cdnImages
+        if (cdnImage) logo = cdnImage
     } catch (error) {}
     fs.writeFileSync(
         join(
