@@ -27,7 +27,6 @@ const generate = async () => {
         const fileName =
             file.replace('/index.html', '').replace(/\//g, '_') + '.png'
         const html = fs.readFileSync(file).toString()
-        console.log(file)
 
         let title = ''
         try {
@@ -112,7 +111,7 @@ const generate = async () => {
             </html>`
         })
 
-        console.log(fileName)
+        console.log('Generated SEO image', fileName)
         fs.writeFileSync(
             file,
             fs
