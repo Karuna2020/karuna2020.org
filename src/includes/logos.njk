@@ -1,0 +1,11 @@
+<ol class="postlist partnerslist homelogos">
+{% for post in collections.partners %}
+    <li>
+        <a href="{{ post.url | url }}">
+            {% if post.data.logo %}
+                <img alt="" src="{{ post.data.logo }}">
+            {% endif %}
+        </a>
+    </li>
+{% endfor %}
+</ol>

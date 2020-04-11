@@ -78,9 +78,28 @@ a.cta:focus {
     opacity: 0.75;
 }
 
+.homelogos {
+    margin-bottom: -2.5em;
+}
+.homelogos li {
+    width: auto;
+    flex: 1 0 0;
+    max-width: 175px;
+}
+
 @media (max-width: 500px) {
     .people > div,
     .partnerslist li {
         width: 100%;
+    }
+    .homelogos {
+        margin-bottom: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .homelogos li {
+        width: 45%;
+        margin: 0;
+        flex: none;
     }
 }
