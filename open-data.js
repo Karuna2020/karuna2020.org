@@ -107,9 +107,7 @@ ${
     [
         ...((update.distribution || {}).cdnImages || '')
             .split(',')
-            .map(i => i.trim()),
-
-        ...((update.distribution || {}).distributionPictures || [])
+            .map(i => i.trim())
     ].filter(i => i).length
         ? `
 ## Distribution
@@ -118,9 +116,7 @@ ${
 ${[
     ...((update.distribution || {}).cdnImages || '')
         .split(',')
-        .map(i => i.trim()),
-
-    ...((update.distribution || {}).distributionPictures || [])
+        .map(i => i.trim())
 ]
     .filter(i => i)
     .filter(i => typeof i === 'string' || i.thumbnails)
