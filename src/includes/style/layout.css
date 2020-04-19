@@ -32,6 +32,10 @@ html {
     font-size: 150%;
     text-decoration: none;
 }
+.header .logo > div > div:last-child {
+    font-size: 70%;
+    margin-top: 0.25em;
+}
 .header .logoheader {
     height: 2em;
     margin-right: 1em;
@@ -80,6 +84,13 @@ html {
     justify-content: space-between;
     align-items: flex-end;
     background-color: #f0f0f0;
+}
+.footer nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer nav a {
+    margin-right: 1em;
 }
 
 .impact {

@@ -2,7 +2,10 @@
     <div>
         <a href="/" class="iconlink logo">
             <img class="logoheader" alt="" src="https://cdn.karuna2020.org/icon-white.svg">
-            {{ meta.title }}
+            <div>
+                <div>{{ meta.title }}</div>
+                <div>Together, we shall overcome</div>
+            </div>
         </a>
         <nav class="socialmedia">
             <a href="https://www.facebook.com/Karuna2020.org" aria-label="Facebook">
@@ -23,14 +26,11 @@
         </nav>
     </div>
     <nav>
-        <a {% if page.url == "/" %} class="active"{% endif %} href="/">Home</a>
-        <a {% if "/about/" in page.url %} class="active"{% endif %} href="/about/">About</a>
-        <a {% if "/updates/" in page.url %} class="active"{% endif %} href="/updates/">Updates</a>
+        <a {% if page.url == "/" %} class="active"{% endif %} href="/">Updates</a>
         <a {% if "/guides/" in page.url %} class="active"{% endif %} href="/guides/">Guides</a>
         <a {% if "/contributors/" in page.url %} class="active"{% endif %} href="/contributors/">Contributors</a>
         <a {% if "/volunteers/" in page.url %} class="active"{% endif %} href="/volunteers/">Volunteers</a>
         <a {% if "/partners/" in page.url %} class="active"{% endif %} href="/partners/">Partners</a>
-        <a {% if "/api/" in page.url %} class="active"{% endif %} href="/api/">API</a>
         <a class="cta{% if "/donate/" in page.url %} active{% endif %}" href="/donate/">Donate now →</a>
     </nav>
 </header>
