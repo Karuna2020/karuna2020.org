@@ -1,13 +1,10 @@
 <ol class="postlist" reversed>
 {% for post in collections.updates | reverse %}
-    {% if loop.index <= 5 %}
-        <li>
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-            <time datetime="{{ post.date | dateToFormat('yyyy-LL-dd') }}">
-                ({{ post.date | dateToFormat(meta.dateFormat) }})
-            </time>
-        </li>
-    {% endif %}
+    <li>
+        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        <time datetime="{{ post.date | dateToFormat('yyyy-LL-dd') }}">
+            ({{ post.date | dateToFormat(meta.dateFormat) }})
+        </time>
+    </li>
 {% endfor %}
 </ol>
-<p style="margin-top: 1em"><a href="/updates/">View all updates →</a></p></p>
