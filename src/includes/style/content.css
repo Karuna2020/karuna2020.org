@@ -87,6 +87,37 @@ a.cta:focus {
     max-width: 175px;
 }
 
+.tooltip {
+    position: relative;
+}
+.tooltip:hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid rgba(10, 10, 10, 0.75);
+}
+.tooltip:hover::after {
+    content: attr(aria-label);
+    position: absolute;
+    left: 0;
+    margin-left: -7.5rem;
+    top: calc(100% + 0.5rem);
+    color: #fff;
+    backdrop-filter: blur(0.25rem);
+    background-color: rgba(10, 10, 10, 0.75);
+    line-height: 1.25;
+    width: 15rem;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    font-size: 80%;
+}
+
 @media (max-width: 500px) {
     .people > div,
     .partnerslist li {

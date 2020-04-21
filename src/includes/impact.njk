@@ -1,15 +1,21 @@
 <div class="impact">
   <div>
     <div>₹{{ data.summary.totalAmountRaised | numberify }}</div>
-    <div>Total raised</div>
-  </div>
-  <div>
-    <div>{{ data.summary.numberOfPeopleImpacted | numberify }}</div>
-    <div>People impacted</div>
+    <div>
+      <span>Total raised</span>
+      <span class="tooltip" aria-label="Total amount, including in-kind donations">{% include "icons/help.njk" %}</span>
+    </div>
   </div>
   <div>
     <div>{{ data.summary.numberOfContributors | numberify }}</div>
     <div>Contributors</div>
+  </div>
+  <div>
+    <div>{{ ((data.summary.totalAmountRaised / 750) * 4.5) | numberify }}</div>
+    <div>
+      <span>People impacted</span>
+      <span class="tooltip" aria-label="Calculated with average family size of 4.5 people">{% include "icons/help.njk" %}</span>
+    </div>
   </div>
   <div>
     <div>{{ data.summary.numberOfVolunteers | numberify }}</div>
