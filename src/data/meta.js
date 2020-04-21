@@ -19,5 +19,5 @@ module.exports = {
     primaryColor: META_COLOR || '#c00058',
     email: META_EMAIL || undefined,
     telephone: META_TELEPHONE || undefined,
-    dateFormat: 'dd LLLL yyyy'
+    dateFormat: 'LLLL d, yyyy'
 }
