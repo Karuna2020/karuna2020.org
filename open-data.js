@@ -52,7 +52,7 @@ websiteData.forEach(update => {
     }
     let smoImage = 'https://cdn.karuna2020.org/logo-vertical.svg'
     try {
-        smoImage = updatePhotos[0].thumbnails.large.url
+        if (updatePhotos.length) smoImage = updatePhotos[0]
     } catch (error) {}
 
     const distributions = update.linkedDistribution
@@ -86,7 +86,7 @@ websiteData.forEach(update => {
             `---
 date: ${(update.distribution || {}).deliveredOn || update.date}
 title: ${update.event}
-smoImage: ${smoImage}
+coverPhoto: ${smoImage}
 ---
 
 ${update.notes}
