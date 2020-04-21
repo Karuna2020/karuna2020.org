@@ -1,10 +1,15 @@
-<ol class="postlist" reversed>
+<ol class="postlist imaged" reversed>
 {% for post in collections.updates | reverse %}
     <li>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-        <time datetime="{{ post.date | dateToFormat('yyyy-LL-dd') }}">
-            ({{ post.date | dateToFormat(meta.dateFormat) }})
-        </time>
+        <a href="{{ post.url | url }}">
+            <img alt="" src="{{ post.data.coverPhoto }}" loading="lazy" width="1024" height="1024">
+        </a>
+        <div>
+            <time datetime="{{ post.date | dateToFormat('yyyy-LL-dd') }}">
+                {{ post.date | dateToFormat(meta.dateFormat) }}
+            </time>
+        </div>
+        <div><a href="{{ post.url | url }}">{{ post.data.title }}</a></div>
     </li>
 {% endfor %}
 </ol>
