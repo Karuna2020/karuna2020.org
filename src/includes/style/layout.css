@@ -189,3 +189,19 @@ table tr:nth-child(2n) td {
     margin-bottom: 1em;
     margin-right: 1em;
 }
+
+.targets > div {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.targets > div > div {
+    flex: 1 0 0;
+}
+.targets progress {
+    flex: 1 0 0;
+    width: 100%;
+}
+.targets progress + div {
+    text-align: right;
+}

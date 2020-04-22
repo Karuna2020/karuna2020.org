@@ -24,8 +24,40 @@
 </div>
 
 <div class="content">
-  <blockquote class="heroquote">
+  {# <blockquote class="heroquote">
     <p>&ldquo;There are people in the world so hungry, that God cannot appear to them except in the form of food.&rdquo;</p>
     <footer><cite>Mahatma Gandhi</footer>
-  </blockquote>
+  </blockquote> #}
+  <div class="targets">
+    <div>
+      <div>
+        <div><strong>Target 3:</strong> Distribute 1,500 more kits</div>
+        <div><em>Ongoing</em></div>
+      </div>
+      <div>
+        <progress max="100" value="{{ ((data.summary.numberOfKitDistributionsCompleted - 1500) * 100 / 1500) | int }}"></progress>
+        <div>{{ ((data.summary.numberOfKitDistributionsCompleted - 1500) * 100 / 1500) | int }}%</div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div><strong>Target 2:</strong> Distribute 1,000 more kits</div>
+        <div>Completed in 8 days</div>
+      </div>
+      <div>
+        <progress></progress>
+        <div>100%</div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div><strong>Target 1:</strong> Distribute 500 kits</div>
+        <div>Completed in 3 days</div>
+      </div>
+      <div>
+        <progress></progress>
+        <div>100%</div>
+      </div>
+    </div>
+  </div>
 </div>
