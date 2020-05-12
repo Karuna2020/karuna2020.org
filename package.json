@@ -31,6 +31,6 @@
         "luxon": "^1.24.1",
         "markdown-it": "^10.0.0",
         "markdown-it-anchor": "^5.2.7",
-        "node-html-to-image": "^1.2.0"
+        "node-html-to-image": "^2.0.0"
     }
 }
