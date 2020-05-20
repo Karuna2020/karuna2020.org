@@ -29,7 +29,7 @@
         "eleventy-plugin-safe-external-links": "^0.1.4",
         "htmlnano": "^0.2.5",
         "luxon": "^1.24.1",
-        "markdown-it": "^10.0.0",
+        "markdown-it": "^11.0.0",
         "markdown-it-anchor": "^5.3.0",
         "node-html-to-image": "^2.0.0"
     }
