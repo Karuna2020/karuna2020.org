@@ -99,6 +99,9 @@ html {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.impact + .impact {
+    margin-top: 1.5rem;
+}
 .impact > div > div:first-child {
     font-size: 200%;
     line-height: 1.25;
@@ -141,6 +144,11 @@ html {
 
 .content ol.postlist {
     padding: 0;
+}
+
+ol,
+li {
+    list-style: none;
 }
 
 table {

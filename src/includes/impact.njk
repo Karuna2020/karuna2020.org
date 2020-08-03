@@ -11,15 +11,24 @@
     <div>Contributors</div>
   </div>
   <div>
+    <div>{{ data.summary.numberOfVolunteers | numberify }}</div>
+    <div>Volunteers</div>
+  </div>
+</div>
+<div class="impact">
+  <div>
     <div>{{ ((data.summary.totalAmountRaised / 750) * 4.5) | numberify }}</div>
     <div>
-      <span>People impacted</span>
+      <span>People sustained</span>
       <span class="tooltip" aria-label="Calculated with average family size of 4.5 people">{% include "icons/help.njk" %}</span>
     </div>
   </div>
   <div>
-    <div>{{ data.summary.numberOfVolunteers | numberify }}</div>
-    <div>Volunteers</div>
+    <div>{{ 100000 | numberify }}</div>
+    <div>
+      <span>Masks distributed</span>
+      <span class="tooltip" aria-label="Approximate number of masks">{% include "icons/help.njk" %}</span>
+    </div>
   </div>
 </div>
 
