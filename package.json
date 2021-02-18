@@ -21,7 +21,7 @@
     "dependencies": {
         "@11ty/eleventy": "^0.11.1",
         "@11ty/eleventy-plugin-rss": "^1.1.0",
-        "clean-css": "^4.2.3",
+        "clean-css": "^5.1.0",
         "cross-env": "^7.0.3",
         "del-cli": "^3.0.1",
         "dotenv": "^8.2.0",
