@@ -27,7 +27,7 @@
         "dotenv": "^8.2.0",
         "eleventy-plugin-pwa": "^1.0.8",
         "eleventy-plugin-safe-external-links": "^0.1.5",
-        "htmlnano": "^0.2.8",
+        "htmlnano": "^0.2.9",
         "luxon": "^1.26.0",
         "markdown-it": "^12.0.4",
         "markdown-it-anchor": "^7.1.0",
