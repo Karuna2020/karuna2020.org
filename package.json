@@ -24,7 +24,7 @@
         "clean-css": "^4.2.3",
         "cross-env": "^7.0.3",
         "del-cli": "^3.0.1",
-        "dotenv": "^8.2.0",
+        "dotenv": "^9.0.0",
         "eleventy-plugin-pwa": "^1.0.8",
         "eleventy-plugin-safe-external-links": "^0.1.5",
         "htmlnano": "^0.2.9",
