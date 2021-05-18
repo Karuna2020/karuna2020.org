@@ -5,6 +5,7 @@ on:
             - 'master'
     repository_dispatch:
         types: [update]
+    workflow_dispatch:
 jobs:
     release:
         name: Build
