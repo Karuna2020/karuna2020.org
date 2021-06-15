@@ -30,7 +30,7 @@
         "htmlnano": "^0.2.9",
         "luxon": "^1.27.0",
         "markdown-it": "^12.0.6",
-        "markdown-it-anchor": "^7.1.0",
+        "markdown-it-anchor": "^8.0.1",
         "node-html-to-image": "^3.1.0"
     }
 }
