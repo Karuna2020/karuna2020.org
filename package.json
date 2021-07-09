@@ -28,7 +28,7 @@
         "eleventy-plugin-pwa": "^1.0.8",
         "eleventy-plugin-safe-external-links": "^0.1.5",
         "htmlnano": "^0.2.9",
-        "luxon": "^1.27.0",
+        "luxon": "^1.28.0",
         "markdown-it": "^12.1.0",
         "markdown-it-anchor": "^7.1.0",
         "node-html-to-image": "^3.2.0"
