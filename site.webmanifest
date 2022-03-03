@@ -1,0 +1,24 @@
+{
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Karuna 2020",
+    "short_name": "Karuna 2020",
+    "description": "Karuna 2020 is an initiative to do our part in helping feed those most affected during COVID-19 in India.",
+    "icons": [
+        {
+            "src": "/static/images/favicon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/favicon/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#1a1a1a",
+    "background_color": "#FFFFFF",
+    "start_url": "/index.html",
+    "display": "minimal-ui",
+    "orientation": "natural"
+}
